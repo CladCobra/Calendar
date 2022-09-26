@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Calendar</title>
+		<link rel="stylesheet" href="css/styles.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<div class="container">
+			<div class="calendar">
+				<div class="month-container">
+					<i class="fas fa-angle-left previous-date" id="previous-month"></i>
+					<div class="date-container">
+						<h1 class="month" id="month"></h1>
+					</div>
+					<i class="fas fa-angle-right next-date" id="next-month"></i>
+				</div>
+				<div class="day-labels">
+					<div>Sun</div>
+					<div>Mon</div>
+					<div>Tue</div>
+					<div>Wed</div>
+					<div>Thu</div>
+					<div>Fri</div>
+					<div>Sat</div>
+				</div>
+				<div class="days" id="days"></div>
+			</div>
+		</div>
+		<script src="js/index.js"></script>
+		<script
+			src="https://kit.fontawesome.com/c76636765f.js"
+			crossorigin="anonymous"
+		></script>
+	</body>
+</html>
