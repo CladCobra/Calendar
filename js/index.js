@@ -1,19 +1,21 @@
-const date = new Date();
+var date = new Date();
+date = new Date();
+const months = [
+	"January",
+	"February",
+	"March",
+	"April",
+	"May",
+	"June",
+	"July",
+	"August",
+	"September",
+	"October",
+	"November",
+	"December",
+];
+
 function renderCalendar() {
-	const months = [
-		"January",
-		"February",
-		"March",
-		"April",
-		"May",
-		"June",
-		"July",
-		"August",
-		"September",
-		"October",
-		"November",
-		"December",
-	];
 	const monthDays = document.getElementById("days");
 	const lastDay = new Date(
 		date.getFullYear(),
@@ -53,7 +55,7 @@ function renderCalendar() {
 			date.getMonth() === new Date().getMonth() &&
 			date.getFullYear() === new Date().getFullYear()
 		) {
-			days += `<a href="day.html" class="today">${i}</a>`;
+			days += `<a href="day.html" class="today" onclick="onDayClick(${i})">${i}</a>`;
 		} else {
 			days += `<a href="day.html" onclick="onDayClick(${i})">${i}</a>`;
 		}
@@ -78,6 +80,8 @@ document.getElementById("next-month").addEventListener("click", () => {
 
 renderCalendar();
 
-function onDayClick(dayNum) {
-	localStorage["day"] = dayNum;
+function onDayClick(day) {
+	sessionStorage.setItem("day", day);
+	sessionStorage.setItem("month", months[date.getMonth()]);
+	sessionStorage.setItem("year", date.getFullYear());
 }

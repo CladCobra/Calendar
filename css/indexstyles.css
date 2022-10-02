@@ -3,9 +3,10 @@
 	--calendar-height: 100vh;
 	--days-margin: 0.3rem;
 	--days-padding: 0.2rem;
-	--primary-color: #222227;
-	--accent-color: #167e56;
-	--hover-color: rgb(60, 60, 60);
+	--primary-color: #00abe1;
+	--secondary-color: #161f6d;
+	--accent-color: #fecd45;
+	--hover-color: #4a83ff;
 	--text-color: #fff;
 }
 
@@ -23,7 +24,6 @@ html {
 .container {
 	width: 100%;
 	height: 100vh;
-	background-color: var(--primary-color);
 	color: var(--text-color);
 	display: flex;
 	justify-content: center;
@@ -40,7 +40,7 @@ html {
 .month-container {
 	width: 100%;
 	height: 12rem;
-	background-color: var(--accent-color);
+	background-color: var(--secondary-color);
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -62,10 +62,6 @@ html {
 	text-transform: uppercase;
 	letter-spacing: 0.2rem;
 	margin-bottom: 1rem;
-}
-
-.date {
-	font-size: 2rem;
 }
 
 .day-labels {
@@ -129,5 +125,5 @@ html {
 }
 
 .today {
-	background-color: var(--accent-color);
+	background-color: var(--secondary-color);
 }
